@@ -1,0 +1,22 @@
+{
+  "name": "webcam-segmentation",
+  "version": "1.0.0",
+  "description": "Webcam segmentation app using TensorFlow and Mediapipe",
+  "main": "server.js",
+ 
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "@techstark/opencv-js": "^4.10.0-release.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "opencv.js": "^1.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "author": "",
+  "license": "ISC"
+ 
+}

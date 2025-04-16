@@ -1,0 +1,130 @@
+/* General body and layout styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #181a1f; /* Darker background for sleek feel */
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(135deg, #2a2e37 0%, #1c2128 100%);
+  flex-direction: column; /* To stack items vertically */
+}
+
+/* Header styling */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Container for video and canvas */
+.video-container {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Centers video horizontally */
+  align-items: center; /* Centers video vertically */
+  width: 100%;
+  max-width: 700px; /* Restricting max width for larger screens */
+  height: 60vh;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  padding: 0px;
+}
+
+/* Video styling */
+#webcam {
+  width: 100%; /* Ensures the webcam fills the container width */
+  height: 100%; /* Ensures the webcam fills the container height */
+  object-fit: cover; /* Adjusts the video to cover the area without distortion */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Canvas styling */
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Controls section for buttons */
+.controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-main {
+  background-color: #008cba;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-main:hover {
+  background-color: #006c8c;
+}
+
+/* Color selection images */
+.color-options {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.colorButton {
+  width: 50px;
+  height: 50px;
+  margin: 0 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.colorButton:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #a5a5a5;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .video-container {
+    height: 50vh; /* Adjust the height for smaller screens */
+    width: 90%; /* Make the video container more responsive */
+    max-width: 100%; /* Remove any max-width for mobile */
+  }
+
+  .btn-main {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+
+  .colorButton {
+    width: 40px;
+    height: 40px;
+  }
+}

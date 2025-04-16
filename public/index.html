@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real-time Hair Color Change</title>
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Real-time Hair Color Change</h1>
+      </header>
+
+      <div class="video-container">
+        <video
+          id="webcam"
+          width="480"
+          height="360"
+          autoplay
+          playsinline
+        ></video>
+        <canvas id="canvas" width="480" height="360"></canvas>
+      </div>
+
+      <div class="controls">
+        <button id="webcamButton" class="btn-main">Apply</button>
+        <div class="color-options">
+          <img
+            class="colorButton"
+            id="colorBlack"
+            src="/assets/Black1.png"
+            alt="Purple"
+            aria-label="Select Purple"
+          />
+          <img
+            class="colorButton"
+            id="colorLightBrown"
+            src="/assets/lightBrown2.png"
+            alt="Purple"
+            aria-label="Select Purple"
+          />
+          <img
+            class="colorButton"
+            id="colorDarkBrown"
+            src="/assets/dark brown3.png"
+            alt="Purple"
+            aria-label="Select Purple"
+          />
+          <img
+            class="colorButton"
+            id="colorDarkBurgundy"
+            src="/assets/darkBurgundy4.png"
+            alt="Green"
+            aria-label="Select Green"
+          />
+          <img
+            class="colorButton"
+            id="colorLightBurgundy"
+            src="/assets/lightBurgundy5.png"
+            alt="Red"
+            aria-label="Select Red"
+          />
+          <img
+            class="colorButton"
+            id="colormagenta"
+            src="/assets/Magenta6.png"
+            alt="Black"
+            aria-label="Select Black"
+          />
+          <img
+            class="colorButton"
+            id="colovoilet"
+            src="/assets/voilet7.png"
+            alt="cyan"
+            aria-label="Select cyan"
+          />
+          <img
+            class="colorButton"
+            id="colorBlue"
+            src="/assets/Blue8.png"
+            alt="purple1"
+            aria-label="Select purple1"
+          />
+        </div>
+      </div>
+
+      <div id="hair-controls" style="margin-top: 1em;">
+  <label>
+    🎨 Blend Alpha:
+    <input type="range" id="blendAlphaSlider" min="0" max="1" step="0.01" value="0.6">
+    <span id="blendAlphaValue">0.6</span>
+  </label>
+  <br>
+  <label>
+    💡 Brightness Influence:
+    <input type="range" id="brightnessSlider" min="0" max="2" step="0.01" value="1.0">
+    <span id="brightnessValue">1.0</span>
+  </label>
+  <br>
+<label>
+  🟣 Saturation Boost:
+  <input type="range" id="saturationSlider" min="0" max="3" step="0.01" value="1.0">
+  <span id="saturationValue">1.0</span>
+</label>
+</div>
+
+<div id="hair-controls" style="margin-top: 1em; max-width: 400px; font-family: sans-serif;">
+  <label>
+    🎨 Hair Color:
+    <input type="color" id="hairColorPicker" value="#ff69b4">
+    <span id="colorPreview" 
+          style="display: inline-block; width: 20px; height: 20px; border: 1px solid #ccc; vertical-align: middle; background-color: #ff69b4;"></span>
+  </label>
+
+  <br><br>
+
+  <label>
+    Presets:
+    <select id="presetColors">
+      <option value="#ff69b4">Pink</option>
+      <option value="#f4d03f">Blonde</option>
+      <option value="#d35400">Ginger</option>
+      <option value="#e74c3c">Red</option>
+      <option value="#2e86de">Blue</option>
+      <option value="#8e44ad">Purple</option>
+      <option value="#000000">Black</option>
+    </select>
+  </label>
+
+  <br><br>
+
+  </div>
+
+
+      <footer class="footer">
+        <p>Hair Color-Try-On</p>
+      </footer>
+    </div>
+
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
